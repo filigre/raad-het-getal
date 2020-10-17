@@ -1,0 +1,72 @@
+h1 {
+    color: white;
+    font-size: 25px;
+    margin:0;
+    padding:0;
+}
+header {
+    height:50px;
+    width:100%;
+    background-color:rgb(64,191,64);
+    padding-top:20px;
+    text-align:center;
+    font-size:2em;
+    color:white;
+    border:2px solid rgb(64,191,64); 
+}
+.button-start {
+    height:30px;
+    width:150px;
+    margin:2px;
+}
+.button-gok {
+    height:30px;
+    width:130px;
+    margin:2px;
+}
+.fout {
+    color: red;
+}
+.geraden{
+    color: green;
+}
+.hint {
+    color: brown;
+}
+.jammer {
+    color: red;
+}
+.veld {
+    height:25px;
+    width:130px;
+    margin:2px;
+}
+.lijn {
+    color:rgb(71, 64, 64);
+    border:2px solid rgb(64,191,64); 
+    border-bottom: 0;
+}
+.startFrame {
+    height:35px;
+    width:100%;
+    background-color:white;
+    margin-bottom:100px;
+    margin:0;
+    padding-top:15px;
+    text-align:center;
+    font-size:1em;
+    color:rgb(71, 64, 64);
+}
+.berichtgeving {
+    height:100px;
+    width:100%;
+    background-color:white;
+    margin:0;
+    padding-top:65px;
+    text-align:center;
+    font-size:1em;
+    color:rgb(71, 64, 64);
+}
+.set-button {
+    margin-top:0px;
+}
