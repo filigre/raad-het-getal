@@ -3,16 +3,20 @@
   <h1>Raad het getal</h1>
 </header>
 
+<div class="txt">
+  Raad het getal tussen 1 en 100. Je krijgt telkens 10 beurten. Succes ermee!
+</div>
+
 <div class="startFrame">
   <p class="set-button" *ngIf="randomNummer === null; else elseBlock">
     <button class="button-start" (click)="startGame()">Start een nieuw spel</button>
   </p>
     <ng-template #elseBlock>
-      <button class="button-start" (click)="startGame()">Begin een nieuw spel</button>
+      <button class="button-start" (click)="startGame()">Begin het spel opnieuw</button>
     </ng-template>
 
     <p *ngIf="randomNummer != null">
-      <input class="veld" #input type="text">
+      <input type="text" min="1" max="100" class="veld" #input>
       <button class="button-gok" (click)="tryMatch(input.value)">Doe een gok</button><br>
       <span class="fout">{{errorMessage}}</span>
     </p>
@@ -36,7 +40,7 @@
 
   <span *ngIf="aantalPogingen < 10">Alle pogingen:</span>
   <span *ngFor="let nummer of geschiedenis">
-   {{nummer}},
+    {{nummer}},
   </span> 
 
 </div>

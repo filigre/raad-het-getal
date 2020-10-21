@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,6 @@ import { Output, EventEmitter } from '@angular/core';
 export class AppComponent { 
   
   title = 'first-app';  
-  @Output() notify = new EventEmitter();
 
   public randomNummer: number;
   public aantalPogingen: number; 
@@ -23,15 +21,15 @@ export class AppComponent {
     this.randomNummer = null; 
   }
 
-  private generateNumber() : void {
+  private generateNumber = () : void => {
     this.randomNummer = Math.floor(Math.random() * 100) + 1;
   }
 
-  private updatePogingen() : void {
+  private updatePogingen = () : void => {
     this.aantalPogingen -= 1;
   }
- 
-  startGame() : void { 
+  
+  startGame = () : void => {
     this.geschiedenis = [];
     this.gokVerschil = null;
     this.errorMessage = "";
@@ -39,12 +37,11 @@ export class AppComponent {
     this.generateNumber();
   }
 
-  ngOnInit() { 
+  ngOnInit = () : void => { 
     this.errorMessage = "";
   }
 
-  tryMatch(gok: number) : void { 
-
+  tryMatch = (gok: number) : void => {
     this.errorMessage = "";
     this.gokVerschil = this.randomNummer - gok;
 
@@ -52,7 +49,7 @@ export class AppComponent {
       this.errorMessage = "Het veld mag niet leeg zijn!";
     }
     else if(isNaN(Number(this.gokVerschil)) || gok < 1  || gok > 100) {
-      this.errorMessage = "Je dient een nummer in te geven tussen 1 tot en 100";
+      this.errorMessage = "Je dient een nummer in te geven tussen 1 en 100";
     }  
     else {
       this.gok = gok;
@@ -66,6 +63,6 @@ export class AppComponent {
       if(this.aantalPogingen < 1) {
         this.randomNummer = null;
       }
-    }  
+    } 
   }
 }

@@ -4,6 +4,13 @@ h1 {
     margin:0;
     padding:0;
 }
+.txt {
+    color: green;
+    font-size: 1em;
+    text-align:center;
+    margin-top:10px;
+    padding:0;
+}
 header {
     height:50px;
     width:100%;
@@ -16,7 +23,7 @@ header {
 }
 .button-start {
     height:30px;
-    width:150px;
+    width:160px;
     margin:2px;
 }
 .button-gok {
@@ -40,11 +47,6 @@ header {
     height:25px;
     width:130px;
     margin:2px;
-}
-.lijn {
-    color:rgb(71, 64, 64);
-    border:2px solid rgb(64,191,64); 
-    border-bottom: 0;
 }
 .startFrame {
     height:35px;
