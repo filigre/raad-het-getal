@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent { 
   
-  title = 'first-app';  
+  title = 'Raad het getal';  
 
   public randomNummer: number;
   public aantalPogingen: number; 
