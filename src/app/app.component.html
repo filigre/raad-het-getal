@@ -1,28 +1,27 @@
+  <header>
+    <h1>Raad het getal</h1>
+  </header>
 
-<header>
-  <h1>Raad het getal</h1>
-</header>
-
-<div class="txt">
+  <div class="txt">
   Raad het getal tussen 1 en 100. Je krijgt telkens 10 beurten. Succes ermee!
 </div>
 
-<div class="startFrame">
+  <div class="startFrame">
   <p class="set-button" *ngIf="randomNummer === null; else elseBlock">
-    <button class="button-start" (click)="startGame()">Start een nieuw spel</button>
+    <button mat-raised-button color="primary" (click)="startGame()">Start een nieuw spel</button>
   </p>
     <ng-template #elseBlock>
-      <button class="button-start" (click)="startGame()">Begin het spel opnieuw</button>
+      <button mat-icon-button color="warn" (click)="startGame()" aria-label="Begin een nieuw spel"><mat-icon>delete</mat-icon>Reset</button>
     </ng-template>
 
     <p *ngIf="randomNummer != null">
       <input type="text" min="1" max="100" class="veld" #input>
-      <button class="button-gok" (click)="tryMatch(input.value)">Doe een gok</button><br>
+      <button mat-stroked-button color="primary"  (click)="tryMatch(input.value)">Doe een gok</button><br>
       <span class="fout">{{errorMessage}}</span>
     </p>
 </div>
 
-<div class="berichtgeving">
+  <div class="berichtgeving">
   <p class="hint" *ngIf="gokVerschil > 0 && aantalPogingen > 0 && errorMessage == '' ">
     <b>Kies een hoger getal dan {{gok}}</b> </p>
   <p class="hint" *ngIf="gokVerschil < 0 && aantalPogingen > 0 && errorMessage == '' ">
@@ -42,6 +41,8 @@
   <span *ngFor="let nummer of geschiedenis">
     {{nummer}},
   </span> 
-
 </div>
+
+
+
 
